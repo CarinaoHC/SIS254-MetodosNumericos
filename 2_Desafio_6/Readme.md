@@ -4,7 +4,7 @@
 
 Este documento presenta un ejemplo sencillo de un sistema de ecuaciones lineales que está mal condicionado. Un sistema mal condicionado es aquel en el que pequeñas variaciones en los coeficientes o en los términos independientes producen grandes cambios en la solución.
 
-### Ejemplo: Sistema de 3x3 sin decimales
+### Ejemplo: Sistema de 3x3
 
 **Sistema de ecuaciones:**
 10x + 9y + 8z = 27
@@ -36,10 +36,36 @@ Este documento presenta un ejemplo sencillo de un sistema de ecuaciones lineales
 
 Este ejemplo simple demuestra cómo pequeñas variaciones en los coeficientes pueden tener un gran impacto en la solución de un sistema mal condicionado. Es fundamental identificar y manejar estos sistemas para obtener resultados confiables en aplicaciones reales.
 
-### Visualización (opcional)
-* **Gráficos:** Puedes incluir gráficos 3D para visualizar los planos representados por las ecuaciones y mostrar su casi paralelismo.
-* **Animaciones:** Crear animaciones que muestren cómo pequeños cambios en los coeficientes afectan la posición de los planos.
+### Visualización
+* **Gráfico:** 
+
 
 ### Código (Octave/MATLAB)
 ```octave
-% ... tu código Octave aquí ...
+A = [10 9 8; 9 8 7; 8 7 6];
+b = [27; 24; 21];
+
+% Resolver el sistema
+x = inv(A)*b
+
+% Calcular el número de condición
+cond(A)
+
+% Verificar la identidad
+A*inv(A)
+
+% Calcular el determinante
+det(A)
+
+% Perturbar la matriz y resolver nuevamente
+A1 = [10 8.98 8; 9 8 7; 8 7 6];
+b1 = [27; 24; 21];
+x1 = inv(A1)*b1
+
+% Calcular el número de condición y el determinante de la matriz perturbada
+cond(A1)
+det(A1)
+```
+
+### Conclusiones
+El código de Octave demuestra claramente cómo un pequeño cambio en un coeficiente de un sistema de ecuaciones mal condicionado puede provocar grandes cambios en la solución. Esto es una característica distintiva de los sistemas mal condicionados y subraya la importancia de identificar y manejar estos sistemas con cuidado.
