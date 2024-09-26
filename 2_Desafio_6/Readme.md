@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="Content-Language" content="en">
-</head>
-<body>
-  </body>
-</html>
 ## Sistema de Ecuaciones Lineales Mal Condicionado
 
 ### Introducción
