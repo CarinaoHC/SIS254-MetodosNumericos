@@ -38,7 +38,7 @@ Este ejemplo simple demuestra cómo pequeñas variaciones en los coeficientes pu
 
 ### Visualización
 * **Gráfico:** 
-
+![Diagrama de flujo](Grafico.png)
 
 ### Código (Octave/MATLAB)
 ```octave
