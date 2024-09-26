@@ -7,15 +7,25 @@ Este documento presenta un ejemplo sencillo de un sistema de ecuaciones lineales
 ### Ejemplo: Sistema de 3x3
 
 **Sistema de ecuaciones:**
-10x + 9y + 8z = 27
-9x + 8y + 7z = 24
-8x + 7y + 6z = 21
+```math
+\begin{align*}
+10x + 9y + 8z &= 27 \\
+9x + 8y + 7z &= 24 \\
+8x + 7y + 6z &= 21
+\end{align*}
+```
 
 **Forma matricial:**
+```math
+\begin{align*}
+| 10  9  8 |   | x |   | 27 | \\
+|  9  8  7 | * | y | = | 24 | &= 24 \\
+|  8  7  6 |   | z |   | 21 | &= 21
+\end{align*}
+```
 
-| 10  9  8 |   | x |   | 27 |
-|  9  8  7 | * | y | = | 24 |
-|  8  7  6 |   | z |   | 21 |
+
+
 
 ### ¿Por qué está mal condicionado?
 
@@ -27,18 +37,12 @@ Este documento presenta un ejemplo sencillo de un sistema de ecuaciones lineales
 * **Solución exacta:** Aunque existen infinitas soluciones, una posible es x=1, y=1, z=1.
 * **Perturbación:** Al cambiar ligeramente un coeficiente, el sistema puede volverse inconsistente o tener una solución muy diferente.
 
-### Consecuencias del mal condicionamiento
-* **Inestabilidad:** Pequeños errores pueden amplificarse significativamente.
-* **Dificultad para encontrar la solución exacta:** Métodos numéricos pueden fallar o dar resultados imprecisos.
-* **Interpretación geométrica:** Los planos representados por las ecuaciones son casi paralelos, lo que dificulta encontrar su intersección exacta.
-
 ### Resumen
 
 Este ejemplo simple demuestra cómo pequeñas variaciones en los coeficientes pueden tener un gran impacto en la solución de un sistema mal condicionado. Es fundamental identificar y manejar estos sistemas para obtener resultados confiables en aplicaciones reales.
 
-### Visualización
-* **Gráfico:** 
-![Diagrama de flujo](Grafico.png)
+### Gráfico:
+![DGrafico](Grafico.png)
 
 ### Código (Octave/MATLAB)
 ```octave
