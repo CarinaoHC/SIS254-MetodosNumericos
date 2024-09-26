@@ -18,15 +18,11 @@ Este documento presenta un ejemplo sencillo de un sistema de ecuaciones lineales
 **Forma matricial:**
 ```math
 \begin{align*}
-| 10  9  8 |   | x |   | 27 | \\
-|  9  8  7 | * | y | = | 24 | &= 24 \\
-|  8  7  6 |   | z |   | 21 | &= 21
+| 10 & 9 & 8 |   &| x |   &| 27 | \\
+|  9 & 8 & 7 | * &| y | = &| 24 |  \\
+|  8 & 7 & 6 |   &| z |   &| 21 |
 \end{align*}
 ```
-
-
-
-
 ### ¿Por qué está mal condicionado?
 
 * **Coeficientes muy cercanos:** Los coeficientes forman una secuencia, lo que indica una alta correlación entre las filas de la matriz.
