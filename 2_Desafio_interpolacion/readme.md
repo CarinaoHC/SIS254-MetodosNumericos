@@ -50,11 +50,10 @@ Para \( x = 5,000 \) metros:
 
 ### Resultado para 5,000 metros
 
-El resultado de la interpolación es:
+El resultado de la interpolación en PLANETCALC es:
 
-\[
-T(5000) \approx 182.28^\circ \text{F}
-\]
+![DGrafico](Lagrange.png)
+![DGrafico](Grafico.png)
 
 ### Interpolación para La Paz (3,640 metros)
 
@@ -70,9 +69,7 @@ Repetimos el proceso para \( x = 3,640 \) metros:
 
 La temperatura interpolada para La Paz es:
 
-\[
-T(3640) \approx 186.19^\circ \text{F}
-\]
+![DGrafico](Lagrange_Lapaz.png)
 
 ### Interpolación para El Alto (4,150 metros)
 
@@ -88,9 +85,7 @@ Repetimos el proceso para \( x = 4,150 \) metros:
 
 La temperatura interpolada para El Alto es:
 
-\[
-T(4150) \approx 184.73^\circ \text{F}
-\]
+![DGrafico](Lagrange_Elalto.png)
 
 ## Conclusión
 
