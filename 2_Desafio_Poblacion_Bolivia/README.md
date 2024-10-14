@@ -32,9 +32,7 @@ Queremos **interpolar para el año 2024** y **comparar con los datos oficiales d
 
 La fórmula general para las diferencias divididas es:
 
-$\
-f[x_0, x_1] = rac{{f(x_1) - f(x_0)}}{{x_1 - x_0}}
-$
+$\f[x_0, x_1] = rac{{f(x_1) - f(x_0)}}{{x_1 - x_0}}$
 
 Para cada nivel, calculamos diferencias divididas sucesivas hasta obtener las diferencias necesarias para el polinomio.
 
