@@ -1,4 +1,3 @@
-
 # Informe: Interpolación de la Población de Bolivia utilizando los Métodos de Newton y Lagrange
 
 ## Introducción
@@ -32,32 +31,27 @@ Queremos **interpolar para el año 2024** y **comparar con los datos oficiales d
 
 La fórmula general para las diferencias divididas es:
 
-$\f[x_0, x_1] = rac{{f(x_1) - f(x_0)}}{{x_1 - x_0}}$
+$f[x_0, x_1] = \frac{{f(x_1) - f(x_0)}}{{x_1 - x_0}}$
 
 Para cada nivel, calculamos diferencias divididas sucesivas hasta obtener las diferencias necesarias para el polinomio.
 
 1. **Diferencias de primer nivel** (entre dos puntos):
-\[
-f[x_0, x_1] = rac{{3.0 - 2.7}}{{1960 - 1950}} = 0.03
-\]
+
+$f[x_0, x_1] = \frac{{3.0 - 2.7}}{{1960 - 1950}} = 0.03$
+
 2. **Diferencias de segundo nivel** (entre tres puntos):
-\[
-f[x_0, x_1, x_2] = rac{{f[x_1, x_2] - f[x_0, x_1]}}{{x_2 - x_0}}
-\]
+
+$f[x_0, x_1, x_2] = \frac{{f[x_1, x_2] - f[x_0, x_1]}}{{x_2 - x_0}}$
 
 ### b. Polinomio de Newton
 
 El polinomio de Newton se expresa como:
 
-\[
-P(x) = f(x_0) + f[x_0, x_1](x - x_0) + f[x_0, x_1, x_2](x - x_0)(x - x_1) + \dots
-\]
+$P(x) = f(x_0) + f[x_0, x_1](x - x_0) + f[x_0, x_1, x_2](x - x_0)(x - x_1) + \dots $
 
 Para el ejemplo, supongamos que el polinomio es:
 
-\[
-P(x) = 2.7 + 0.03(x - 1950) + 0.0005(x - 1950)(x - 1960) + \dots
-\]
+$P(x) = 2.7 + 0.03(x - 1950) + 0.0005(x - 1950)(x - 1960) + \dots $
 
 Al interpolar para \(x = 2024\), obtenemos una población estimada de **12.5 millones**.
 
@@ -67,27 +61,20 @@ Al interpolar para \(x = 2024\), obtenemos una población estimada de **12.5 mil
 
 La fórmula general del método de Lagrange es:
 
-\[
-P(x) = \sum_{i=0}^{n} y_i L_i(x)
-\]
+$P(x) = \sum_{i=0}^{n} y_i L_i(x)$
 
 donde \(L_i(x)\) es una función base definida como:
 
-\[
-L_i(x) = \prod_{\substack{0 \le j \le n \ j 
-eq i}} rac{x - x_j}{x_i - x_j}
-\]
+$L_i(x) = \prod_{\substack{0 \le j \le n \\ j \neq i}} \frac{x - x_j}{x_i - x_j} $
 
 ### a. Cálculo de los polinomios base \(L_i(x)\)
 
 Por ejemplo:
 
-\[
-L_0(x) = rac{(x - 1960)(x - 1970)}{(1950 - 1960)(1950 - 1970)}
-\]
-\[
-L_1(x) = rac{(x - 1950)(x - 1970)}{(1960 - 1950)(1960 - 1970)}
-\]
+$L_0(x) = \frac{(x - 1960)(x - 1970)}{(1950 - 1960)(1950 - 1970)} $
+
+$L_1(x) = \frac{(x - 1950)(x - 1970)}{(1960 - 1950)(1960 - 1970)} $
+
 
 Sumamos los términos correspondientes a cada valor de \(y_i\).
 
@@ -113,21 +100,15 @@ El **Instituto Nacional de Estadística (INE)** de Bolivia proyecta una poblaci�
 
 La fórmula del error es:
 
-\[
-E = rac{| P(x) - 	ext{valor real} |}{	ext{valor real}} 	imes 100
-\]
+$E = \frac{| P(x) - \text{valor real} |}{\text{valor real}} \times 100$
 
 ### a. Error para Newton
 
-\[
-E_{	ext{Newton}} = rac{|12.5 - 12.6|}{12.6} 	imes 100 = 0.79\%
-\]
+$E_{\text{Newton}} = \frac{|12.5 - 12.6|}{12.6} \times 100 = 0.79\% $
 
 ### b. Error para Lagrange
 
-\[
-E_{	ext{Lagrange}} = rac{|12.4 - 12.6|}{12.6} 	imes 100 = 1.58\%
-\]
+$E_{\text{Lagrange}} = \frac{|12.4 - 12.6|}{12.6} \times 100 = 1.58\% $
 
 ---
 
