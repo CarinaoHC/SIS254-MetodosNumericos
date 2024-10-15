@@ -4,6 +4,23 @@
 
 En este informe, realizaremos la interpolación de la población de Bolivia utilizando los métodos de **Newton** y **Lagrange**, aplicando estos métodos para interpolar la población en el año 2024 y comparando los resultados con los datos oficiales del **Instituto Nacional de Estadística (INE)**.
 
+## Conceptos
+
+La interpolación es una técnica matemática que permite estimar valores intermedios dentro de un conjunto de datos conocidos. Este método es de gran utilidad en el análisis de series temporales, como el caso de la proyección de la población de un país. En este informe, se realiza un análisis de la evolución histórica de la población de Bolivia mediante el uso de dos métodos de interpolación polinómica: **el método de Newton** y **el método de Lagrange**. Ambos métodos permiten construir un polinomio que se ajusta a los puntos conocidos y predice la población para el año 2024.
+
+Los datos utilizados provienen de censos realizados por el Instituto Nacional de Estadística (INE) de Bolivia, y con ellos se busca comparar las predicciones realizadas mediante estos dos métodos con la proyección oficial del INE para el año 2024. La interpolación polinómica proporciona una forma eficiente de obtener una aproximación en contextos donde los datos son escasos o discontinuos.
+
+## Objetivos
+
+### Objetivo general:
+Realizar una estimación de la población de Bolivia en el año 2024 utilizando interpolación polinómica mediante los métodos de Newton y Lagrange y comparar los resultados con las proyecciones oficiales del Instituto Nacional de Estadística (INE).
+
+### Objetivos específicos:
+1. **Aplicar el método de interpolación de Newton** para estimar la población de Bolivia en el año 2024 a partir de los datos censales de los años 1950 a 2020.
+2. **Utilizar el método de interpolación de Lagrange** para estimar el mismo valor utilizando los mismos datos.
+3. **Comparar los resultados obtenidos** por ambos métodos con la proyección oficial de población del INE para el año 2024.
+4. **Analizar el error** entre las estimaciones realizadas y los valores oficiales del INE, discutiendo la precisión de los métodos.
+
 ---
 
 ## 1. Datos históricos de la población de Bolivia
@@ -126,7 +143,7 @@ $E_{\text{Lagrange}} = \frac{|12.4 - 12.6|}{12.6} \times 100 = 1.58\% $
 
 ### Resultado en PLANETCALC LAGRANGE
 
-![DGrafico](img/lagrange.png.png)
+![DGrafico](img/lagrange.png)
 
    - El polinomio de Lagrange calculado con PlanetCalc muestra el siguiente resultado: **12,712 millones** para el año 2024.   
    - Este resultado también se compara con el valor del INE de **12,6 millones**, produciendo un error porcentual del **1,58%**.
