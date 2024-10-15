@@ -112,7 +112,40 @@ $E_{\text{Lagrange}} = \frac{|12.4 - 12.6|}{12.6} \times 100 = 1.58\% $
 
 ---
 
-## 6. Conclusión
+## 6. Resultados
+
+### Resultado en excel NEWTON y LAGRANGE
+
+![DGrafico](img/img_excel.png)
+
+   - En la primera imagen se presenta una tabla con datos históricos de la población de Bolivia y la interpolación mediante el método de Newton. 
+   - El polinomio de Newton se genera utilizando diferencias divididas para ajustar la curva de los datos históricos desde 1950 hasta 2020. 
+   - La predicción para 2024 es **13,0087849 millones**, mientras que el valor real del INE para 2024 es de **12,6 millones**, lo que genera un **error del 3,24%**.
+   - Este método es muy preciso al utilizar múltiples niveles de diferencias divididas para aproximar la población futura, aunque con un ligero sobreestimado.
+
+
+### Resultado en PLANETCALC LAGRANGE
+
+![DGrafico](img/lagrange.png.png)
+
+   - El polinomio de Lagrange calculado con PlanetCalc muestra el siguiente resultado: **12,712 millones** para el año 2024.   
+   - Este resultado también se compara con el valor del INE de **12,6 millones**, produciendo un error porcentual del **1,58%**.
+   - El polinomio de Lagrange se construye de manera distinta, ajustando una función de polinomios mediante una fórmula que toma en cuenta todos los puntos de la población de Bolivia en años previos, desde 1950 hasta 2020.
+
+
+### Resultado en PLANETCALC NEWTON
+
+![DGrafico](img/newton1.png)
+![DGrafico](img/newton2.png)
+
+   - En las imágenes de PlanetCalc del método de Newton, se observa el polinomio después de una extensa simplificación. El resultado final predice **13.01 millones** para el 2024.
+   - Comparado nuevamente con el valor del INE, el error es del **3,25%**, siendo similar al obtenido en Excel.
+   - Aunque los cálculos realizados por PlanetCalc y Excel son realizados de manera diferente, los resultados son casi idénticos, lo que valida la consistencia del método de Newton.
+
+
+---
+
+## 7. Conclusión
 
 - El **método de Newton** y el **método de Lagrange** son herramientas útiles para la interpolación cuando no tenemos datos intermedios.
 - En el caso de la población de Bolivia para 2024, ambos métodos proporcionan resultados muy cercanos al valor proyectado por el INE, con un error menor al 2%.
