@@ -63,15 +63,11 @@ Los datos históricos del nivel del mar son:
 
 La fórmula de la interpolación de Lagrange es:
 
-\[
-P(x) = \sum_{i=0}^{n} y_i \cdot L_i(x)
-\]
+$P(x) = \sum_{i=0}^{n} y_i \cdot L_i(x)$
 
 donde:
 
-\[
-L_i(x) = \prod_{\substack{0 \leq j < n \\ j \neq i}} \frac{x - x_j}{x_i - x_j}
-\]
+$L_i(x) = \prod_{\substack{0 \leq j < n \\ j \neq i}} \frac{x - x_j}{x_i - x_j}$
 
 Aquí, \( n = 8 \) (8 puntos de datos).
 
@@ -81,39 +77,27 @@ Vamos a calcular \( L_i(x) \) para cada \( i \) de 0 a 7.
 
 1. **Para \( i = 0 \)** (1950):
 
-\[
-L_0(x) = \frac{(x - 1960)(x - 1970)(x - 1980)(x - 1990)(x - 2000)(x - 2010)(x - 2020)}{(1950 - 1960)(1950 - 1970)(1950 - 1980)(1950 - 1990)(1950 - 2000)(1950 - 2010)(1950 - 2020)}
-\]
+$L_0(x) = \frac{(x - 1960)(x - 1970)(x - 1980)(x - 1990)(x - 2000)(x - 2010)(x - 2020)}{(1950 - 1960)(1950 - 1970)(1950 - 1980)(1950 - 1990)(1950 - 2000)(1950 - 2010)(1950 - 2020)}$
 
 Calculando el denominador:
 
-\[
-(1950 - 1960)(1950 - 1970)(1950 - 1980)(1950 - 1990)(1950 - 2000)(1950 - 2010)(1950 - 2020) = (-10)(-20)(-30)(-40)(-50)(-60)(-70) = -50400000
-\]
+$(1950 - 1960)(1950 - 1970)(1950 - 1980)(1950 - 1990)(1950 - 2000)(1950 - 2010)(1950 - 2020) = (-10)(-20)(-30)(-40)(-50)(-60)(-70) = -50400000$
 
 Por lo tanto:
 
-\[
-L_0(x) = \frac{(x - 1960)(x - 1970)(x - 1980)(x - 1990)(x - 2000)(x - 2010)(x - 2020)}{-50400000}
-\]
+$L_0(x) = \frac{(x - 1960)(x - 1970)(x - 1980)(x - 1990)(x - 2000)(x - 2010)(x - 2020)}{-50400000}$
 
 2. **Para \( i = 1 \)** (1960):
 
-\[
-L_1(x) = \frac{(x - 1950)(x - 1970)(x - 1980)(x - 1990)(x - 2000)(x - 2010)(x - 2020)}{(1960 - 1950)(1960 - 1970)(1960 - 1980)(1960 - 1990)(1960 - 2000)(1960 - 2010)(1960 - 2020)}
-\]
+$L_1(x) = \frac{(x - 1950)(x - 1970)(x - 1980)(x - 1990)(x - 2000)(x - 2010)(x - 2020)}{(1960 - 1950)(1960 - 1970)(1960 - 1980)(1960 - 1990)(1960 - 2000)(1960 - 2010)(1960 - 2020)}$
 
 El denominador se calcula como:
 
-\[
-(1960 - 1950)(1960 - 1970)(1960 - 1980)(1960 - 1990)(1960 - 2000)(1960 - 2010)(1960 - 2020) = (10)(-10)(-20)(-30)(-40)(-50)(-60) = 36000000
-\]
+$(1960 - 1950)(1960 - 1970)(1960 - 1980)(1960 - 1990)(1960 - 2000)(1960 - 2010)(1960 - 2020) = (10)(-10)(-20)(-30)(-40)(-50)(-60) = 36000000$
 
 Por lo tanto:
 
-\[
-L_1(x) = \frac{(x - 1950)(x - 1970)(x - 1980)(x - 1990)(x - 2000)(x - 2010)(x - 2020)}{36000000}
-\]
+$L_1(x) = \frac{(x - 1950)(x - 1970)(x - 1980)(x - 1990)(x - 2000)(x - 2010)(x - 2020)}{36000000}$
 
 3. Repetimos este procedimiento para \( i = 2, 3, 4, 5, 6, 7 \) obteniendo sus respectivas expresiones.
 
@@ -121,15 +105,11 @@ L_1(x) = \frac{(x - 1950)(x - 1970)(x - 1980)(x - 1990)(x - 2000)(x - 2010)(x - 
 
 El polinomio \( P(x) \) se construye sumando todos los términos:
 
-\[
-P(x) = \sum_{i=0}^{7} y_i \cdot L_i(x)
-\]
+$P(x) = \sum_{i=0}^{7} y_i \cdot L_i(x)$
 
 Sustituyendo los valores:
 
-\[
-P(x) = 0.0 \cdot L_0(x) + 1.2 \cdot L_1(x) + 2.4 \cdot L_2(x) + 4.0 \cdot L_3(x) + 6.5 \cdot L_4(x) + 9.8 \cdot L_5(x) + 13.4 \cdot L_6(x) + 18.0 \cdot L_7(x)
-\]
+$P(x) = 0.0 \cdot L_0(x) + 1.2 \cdot L_1(x) + 2.4 \cdot L_2(x) + 4.0 \cdot L_3(x) + 6.5 \cdot L_4(x) + 9.8 \cdot L_5(x) + 13.4 \cdot L_6(x) + 18.0 \cdot L_7(x)$
 
 ### Paso 3: Cálculo de las Predicciones
 
@@ -137,9 +117,7 @@ Ahora evaluamos \( P(x) \) para los años 2050, 2075 y 2100.
 
 1. **Predicción para 2050**:
 
-\[
-P(2050) = \sum_{i=0}^{7} y_i \cdot L_i(2050)
-\]
+$P(2050) = \sum_{i=0}^{7} y_i \cdot L_i(2050)$
 
 Sustituyendo cada \( L_i(2050) \) en la ecuación anterior, obtenemos:
 
@@ -147,23 +125,19 @@ Sustituyendo cada \( L_i(2050) \) en la ecuación anterior, obtenemos:
 
 2. **Predicción para 2075**:
 
-\[
-P(2075) = \sum_{i=0}^{7} y_i \cdot L_i(2075)
-\]
+$P(2075) = \sum_{i=0}^{7} y_i \cdot L_i(2075)$
 
 3. **Predicción para 2100**:
 
-\[
-P(2100) = \sum_{i=0}^{7} y_i \cdot L_i(2100)
-\]
+$P(2100) = \sum_{i=0}^{7} y_i \cdot L_i(2100)$
 
 ### Resultados
 
 Después de realizar los cálculos para cada uno de los años:
 
-- **2050**: \( P(2050) \approx 153.6 \, \text{cm} \)
-- **2075**: \( P(2075) \approx 1196.5 \, \text{cm} \)
-- **2100**: \( P(2100) \approx 5956.4 \, \text{cm} \)
+- **2050**: \( $P(2050) \approx 153.6 \, \text{cm}$ \)
+- **2075**: \( $P(2075) \approx 1196.5 \, \text{cm}$ \)
+- **2100**: \( $P(2100) \approx 5956.4 \, \text{cm}$ \)
 
 ### Paso 4: Análisis de Errores
 
