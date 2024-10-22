@@ -135,9 +135,9 @@ $P(2100) = \sum_{i=0}^{7} y_i \cdot L_i(2100)$
 
 Después de realizar los cálculos para cada uno de los años:
 
-- **2050**: \( P(2050) \approx 153.6 \, \text{cm} \)
-- **2075**: \( P(2075) \approx 1196.5 \, \text{cm} \)
-- **2100**: \( P(2100) \approx 5956.4 \, \text{cm} \)
+- Para el año **2050**: P(2050) aproximadamente 153.6 cm
+- Para el año **2075**: P(2075) aproximadamente 1196.5 cm
+- Para el año **2100**: P(2100) aproximadamente 5956.4 cm
 
 ### Paso 4: Análisis de Errores
 
