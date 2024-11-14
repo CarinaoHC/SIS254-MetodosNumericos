@@ -47,4 +47,5 @@ Al comparar los resultados obtenidos mediante Excel con los obtenidos por el pro
   - **Conclusión**: Los resultados coinciden también en este caso, confirmando la exactitud del programa.
 
 ## Conclusión General
-El programa en Python desarrolló ambos métodos de forma precisa y los resultados obtenidos son consistentes con los cálculos realizados en Excel. Esto confirma la fiabilidad del código para realizar cálculos numéricos y obtener resultados correctos en el cálculo de trabajo.
+El ejercicio de cálculo del trabajo realizado al estirar una banda elástica utilizando los métodos del trapecio y de Simpson ha demostrado ser una aplicación eficiente de las técnicas numéricas. La comparación de los resultados obtenidos en Excel y en el programa en Python confirma la consistencia y precisión de ambos enfoques. 
+
